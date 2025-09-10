@@ -664,6 +664,50 @@
             color: var(--accent-color);
         }
 
+        .project-link.primary {
+            background: var(--gradient);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .project-link.primary:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .project-link.secondary {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .project-link.secondary:hover {
+            color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .project-link.primary.disabled {
+            background: var(--card-bg);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            opacity: 0.7;
+            box-shadow: none;
+        }
+
+        .project-link.primary.disabled:hover {
+            transform: none;
+            box-shadow: none;
+            color: var(--text-muted);
+        }
+
         /* Testimonials Section */
         .testimonials {
             background: var(--secondary-bg);
@@ -1207,7 +1251,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/go-system-monitor" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/go-system-monitor" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1218,17 +1262,22 @@
                     <div class="project-header">
                         <h3 class="project-title">React Movie Explorer</h3>
                         <p class="project-description">
-                            Modern React application for exploring movies with search functionality, 
-                            detailed movie information, and responsive design.
+                            Modern React + Vite application for exploring movies with search functionality, 
+                            detailed movie information, and responsive design. Features TypeScript and Tailwind CSS.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
-                            <span class="tech-tag">API Integration</span>
-                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/react-movie-explorer" target="_blank" class="project-link">
+                        <a href="#" onclick="alert('Live demo coming soon! View the source code for full implementation details.')" class="project-link primary disabled">
+                            <i class="fas fa-clock"></i>
+                            Demo Coming Soon
+                        </a>
+                        <a href="https://github.com/Kennethfeh/react-movie-explorer" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1249,7 +1298,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/fastapi-ml-feature-store" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/fastapi-ml-feature-store" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1270,7 +1319,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/nestjs-orders-service" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/nestjs-orders-service" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1291,7 +1340,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/go-gin-accounts" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/go-gin-accounts" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1312,7 +1361,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/django-blog-api" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/django-blog-api" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1333,7 +1382,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/laravel-appointments-api" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/laravel-appointments-api" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1354,7 +1403,7 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/node-express-book-api" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/node-express-book-api" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
@@ -1365,17 +1414,42 @@
                     <div class="project-header">
                         <h3 class="project-title">Code Snippet Manager</h3>
                         <p class="project-description">
-                            Full-stack application for managing and organizing code snippets with 
+                            Full-stack Next.js application for managing and organizing code snippets with 
                             syntax highlighting, tagging, and search capabilities.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Full-Stack</span>
-                            <span class="tech-tag">Code Management</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/code-snippet-manager" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/code-snippet-manager" target="_blank" class="project-link secondary">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript frontend">
+                    <div class="project-header">
+                        <h3 class="project-title">Astro Content Portfolio</h3>
+                        <p class="project-description">
+                            Modern portfolio website built with Astro framework, featuring fast static site generation,
+                            component-based architecture, and excellent performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Astro</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Static Site</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://astro-content-portfolio-2sq2xhmy1-kenneths-projects-4bef11a9.vercel.app" target="_blank" class="project-link primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Live
+                        </a>
+                        <a href="https://github.com/Kennethfeh/astro-content-portfolio" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
