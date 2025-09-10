@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Feh - Portfolio Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #00d4ff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>Portfolio Test Page</h1>
+        <div class="status">
+            <p>✅ HTML is loading correctly</p>
+            <p>✅ CSS is working</p>
+            <p>✅ Basic styling applied</p>
+        </div>
+        <button onclick="testJS()">Test JavaScript</button>
+        <div id="js-result"></div>
+    </div>
+
+    <script>
+        function testJS() {
+            document.getElementById('js-result').innerHTML = '<p style="color: #00d4ff;">✅ JavaScript is working!</p>';
+        }
+        console.log('Test page loaded successfully');
+    </script>
+</body>
+</html>
