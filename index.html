@@ -384,6 +384,58 @@
             margin-top: 40px;
         }
 
+        /* GitHub Stats Section */
+        .github-stats {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .github-contribution-graph {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .github-contribution-graph h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .github-contribution-graph img {
+            max-width: 100%;
+            border-radius: 10px;
+            filter: brightness(1.1);
+        }
+
+        .github-profile-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .github-stat-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .github-stat-card h4 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .github-stat-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
         .stat-item {
             text-align: center;
             padding: 20px;
@@ -554,6 +606,34 @@
         }
 
         /* Projects Section */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -562,6 +642,9 @@
         }
 
         .project-card {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.3s ease;
             background: var(--card-bg);
             border-radius: 20px;
             overflow: hidden;
@@ -574,6 +657,16 @@
             transform: translateY(-10px);
             border-color: var(--accent-color);
             box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .project-card.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
 
         .project-header {
@@ -628,9 +721,84 @@
             color: var(--accent-color);
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--secondary-bg);
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-quote {
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent-color);
+            position: absolute;
+            top: -10px;
+            left: -15px;
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .testimonial-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
         /* Contact Section */
         .contact {
-            background: var(--secondary-bg);
+            background: var(--primary-bg);
         }
 
         .contact-content {
@@ -877,6 +1045,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="mobile-menu">
@@ -958,6 +1127,26 @@
                 <div class="stat-item">
                     <span class="stat-number">10+</span>
                     <span class="stat-label">Technologies Mastered</span>
+                </div>
+            </div>
+            <div class="github-stats fade-in">
+                <div class="github-contribution-graph">
+                    <h3><i class="fab fa-github"></i> GitHub Activity</h3>
+                    <img src="https://ghchart.rshah.org/00d4ff/Kennethfeh" alt="Kenneth's GitHub contribution graph" />
+                </div>
+                <div class="github-profile-stats">
+                    <div class="github-stat-card">
+                        <h4>30+</h4>
+                        <p>Public Repositories</p>
+                    </div>
+                    <div class="github-stat-card">
+                        <h4>8+</h4>
+                        <p>Programming Languages</p>
+                    </div>
+                    <div class="github-stat-card">
+                        <h4>2016</h4>
+                        <p>Coding Since</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1069,10 +1258,21 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="project-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="go">Go</button>
+                <button class="filter-btn" data-filter="typescript">TypeScript</button>
+                <button class="filter-btn" data-filter="php">PHP</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+            </div>
             <div class="projects-grid fade-in">
-                <div class="project-card">
+                <div class="project-card" data-category="go backend">
                     <div class="project-header">
-                        <h3 class="project-title">System Monitor</h3>
+                        <h3 class="project-title">Go System Monitor</h3>
                         <p class="project-description">
                             Real-time system monitoring dashboard built with Go and WebSockets. 
                             Features live CPU, memory, and disk usage tracking with responsive web interface.
@@ -1080,8 +1280,7 @@
                         <div class="project-tech">
                             <span class="tech-tag">Go</span>
                             <span class="tech-tag">WebSockets</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">System Monitoring</span>
                         </div>
                     </div>
                     <div class="project-links">
@@ -1092,113 +1291,238 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="javascript frontend">
                     <div class="project-header">
-                        <h3 class="project-title">Personal Finance API</h3>
+                        <h3 class="project-title">React Movie Explorer</h3>
                         <p class="project-description">
-                            Comprehensive RESTful API for personal finance management with user authentication, 
-                            expense tracking, and financial analytics capabilities.
+                            Modern React application for exploring movies with search functionality, 
+                            detailed movie information, and responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/react-movie-explorer" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="python backend">
+                    <div class="project-header">
+                        <h3 class="project-title">FastAPI ML Feature Store</h3>
+                        <p class="project-description">
+                            Machine Learning feature store built with FastAPI, providing efficient 
+                            feature management and serving for ML models.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/fastapi-ml-feature-store" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="typescript backend">
+                    <div class="project-header">
+                        <h3 class="project-title">NestJS Orders Service</h3>
+                        <p class="project-description">
+                            Microservice built with NestJS for handling order management with 
+                            TypeScript, dependency injection, and modern architecture patterns.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">NestJS</span>
+                            <span class="tech-tag">Microservices</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/nestjs-orders-service" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="go backend">
+                    <div class="project-header">
+                        <h3 class="project-title">Go Gin Accounts API</h3>
+                        <p class="project-description">
+                            RESTful API for user account management built with Go and Gin framework,
+                            featuring authentication, user profiles, and secure endpoints.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Gin Framework</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/go-gin-accounts" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="python backend">
+                    <div class="project-header">
+                        <h3 class="project-title">Django Blog API</h3>
+                        <p class="project-description">
+                            Full-featured blog API built with Django REST framework, supporting 
+                            CRUD operations, user authentication, and content management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">REST Framework</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/django-blog-api" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="php backend">
+                    <div class="project-header">
+                        <h3 class="project-title">Laravel Appointments API</h3>
+                        <p class="project-description">
+                            Appointment scheduling system built with Laravel, featuring booking management,
+                            calendar integration, and notification system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Scheduling</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/laravel-appointments-api" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript backend">
+                    <div class="project-header">
+                        <h3 class="project-title">Node Express Book API</h3>
+                        <p class="project-description">
+                            Book management API built with Node.js and Express, featuring CRUD operations,
+                            search functionality, and database integration.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">Express</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Database</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/personal-finance-api" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/node-express-book-api" target="_blank" class="project-link">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="javascript fullstack">
                     <div class="project-header">
-                        <h3 class="project-title">Personal Finance React App</h3>
+                        <h3 class="project-title">Code Snippet Manager</h3>
                         <p class="project-description">
-                            Modern React application for personal finance management with intuitive UI, 
-                            data visualization, and seamless API integration.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/personal-finance-react" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Personal Finance Vue App</h3>
-                        <p class="project-description">
-                            Vue.js implementation of personal finance tracker showcasing component-based architecture 
-                            and state management with Vuex.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Vuex</span>
-                            <span class="tech-tag">Vue Router</span>
-                            <span class="tech-tag">Axios</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/personal-finance-vue" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Weather Dashboard</h3>
-                        <p class="project-description">
-                            Interactive weather dashboard with location-based forecasts, historical data, 
-                            and beautiful data visualizations powered by weather APIs.
+                            Full-stack application for managing and organizing code snippets with 
+                            syntax highlighting, tagging, and search capabilities.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">API Integration</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Full-Stack</span>
+                            <span class="tech-tag">Code Management</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/weather-dashboard" target="_blank" class="project-link">
+                        <a href="https://github.com/Kennethfeh/code-snippet-manager" target="_blank" class="project-link">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Task Tracker CLI</h3>
-                        <p class="project-description">
-                            Command-line task management tool built with Go, featuring task creation, 
-                            status updates, and persistent data storage.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">CLI</span>
-                            <span class="tech-tag">JSON</span>
-                            <span class="tech-tag">File System</span>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">What Colleagues Say</h2>
+            <div class="testimonials-grid fade-in">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Kenneth consistently delivers high-quality code and demonstrates exceptional problem-solving skills. 
+                        His ability to work across the full stack makes him an invaluable team member. He's always willing 
+                        to help others and share his knowledge.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JS</div>
+                        <div class="testimonial-info">
+                            <h4>James Smith</h4>
+                            <p>Senior Software Engineer, Maple Labs</p>
                         </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/task-tracker" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Working with Kenneth has been a pleasure. His expertise in Go and system architecture helped 
+                        optimize our backend services significantly. He has a great understanding of modern development 
+                        practices and always strives for clean, maintainable code.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">ML</div>
+                        <div class="testimonial-info">
+                            <h4>Maria Lopez</h4>
+                            <p>Tech Lead, Finwise Technologies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Kenneth's journey from self-taught developer to senior engineer is truly inspiring. His dedication 
+                        to continuous learning and his ability to adapt to new technologies quickly makes him stand out. 
+                        Great mentor and team player.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DK</div>
+                        <div class="testimonial-info">
+                            <h4>David Kim</h4>
+                            <p>Engineering Manager, NextStep Software</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">
+                        Kenneth has excellent full-stack development skills with deep knowledge in JavaScript, Python, 
+                        and Go. His code reviews are thorough and constructive, and he has a talent for breaking down 
+                        complex problems into manageable solutions.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AS</div>
+                        <div class="testimonial-info">
+                            <h4>Anna Schmidt</h4>
+                            <p>Senior Frontend Developer</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1365,6 +1689,34 @@
             };
             
             setTimeout(typeWriter, 1000);
+
+            // Project filtering system
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.classList.remove('hidden');
+                        } else {
+                            const categories = card.getAttribute('data-category').split(' ');
+                            if (categories.includes(filterValue)) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            });
 
             // Skill items hover effect
             const skillItems = document.querySelectorAll('.skill-item');
