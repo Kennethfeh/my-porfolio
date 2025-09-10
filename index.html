@@ -147,6 +147,83 @@
 
         .hero-content {
             animation: fadeInUp 1s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .hero-profile {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid transparent;
+            background: var(--gradient);
+            padding: 4px;
+            animation: profileFloat 6s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+        }
+
+        .profile-image-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--card-bg);
+        }
+
+        .hero-profile::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: var(--gradient);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes profileFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% { 
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+        }
+
+        .hero-text {
+            text-align: center;
         }
 
         .hero h1 {
@@ -663,6 +740,11 @@
                 display: flex;
             }
 
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -714,6 +796,15 @@
         @media (max-width: 480px) {
             .container {
                 padding: 0 15px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .hero-content {
+                gap: 20px;
             }
 
             .skills-grid {
@@ -782,22 +873,27 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Kenneth Feh</h1>
-                <p class="subtitle">Senior Full-Stack Engineer</p>
-                <p class="description">
-                    Self-taught developer with 6+ years of experience crafting exceptional digital experiences. 
-                    From junior developer to senior engineer, I specialize in building scalable web applications 
-                    using modern technologies like JavaScript, React, Vue, Node.js, Python, and Go.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
+                <div class="hero-profile">
+                    <img src="profile.jpg" alt="Kenneth Feh - Senior Full-Stack Engineer" class="profile-image profile-image-inner">
+                </div>
+                <div class="hero-text">
+                    <h1>Kenneth Feh</h1>
+                    <p class="subtitle">Senior Full-Stack Engineer</p>
+                    <p class="description">
+                        Self-taught developer with 6+ years of experience crafting exceptional digital experiences. 
+                        From junior developer to senior engineer, I specialize in building scalable web applications 
+                        using modern technologies like JavaScript, React, Vue, Node.js, Python, and Go.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
