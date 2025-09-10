@@ -150,81 +150,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
-        }
-
-        .hero-profile {
-            position: relative;
-            margin-bottom: 30px;
-            display: flex;
             justify-content: center;
-            align-items: center;
+            gap: 30px;
+            text-align: center;
         }
 
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid rgba(0, 212, 255, 0.3);
-            animation: profileFloat 6s ease-in-out infinite;
-            box-shadow: 
-                0 8px 25px rgba(0, 0, 0, 0.3),
-                0 0 0 3px rgba(0, 212, 255, 0.1),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            display: block;
-            position: relative;
-        }
 
-        .profile-image:hover {
-            transform: scale(1.05);
-            border-color: rgba(0, 212, 255, 0.6);
-            box-shadow: 
-                0 12px 35px rgba(0, 0, 0, 0.4),
-                0 0 0 3px rgba(0, 212, 255, 0.3),
-                0 0 20px rgba(0, 212, 255, 0.4),
-                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-profile::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            background: var(--gradient);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0.2;
-            animation: pulse 3s infinite;
-            filter: blur(8px);
-        }
-
-        @keyframes profileFloat {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg);
-            }
-            50% { 
-                transform: translateY(-10px) rotate(2deg);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.3;
-            }
-            50% {
-                transform: scale(1.1);
-                opacity: 0.1;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0.3;
-            }
-        }
 
         .hero-text {
             text-align: center;
@@ -354,16 +285,26 @@
             z-index: -1;
         }
 
-        .about-image-placeholder {
+        .about-profile-photo {
             width: 100%;
+            max-width: 350px;
             height: 400px;
-            background: var(--card-bg);
+            object-fit: cover;
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: var(--accent-color);
+            border: 3px solid rgba(0, 212, 255, 0.3);
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 0 3px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .about-profile-photo:hover {
+            transform: scale(1.02);
+            border-color: rgba(0, 212, 255, 0.6);
+            box-shadow: 
+                0 12px 35px rgba(0, 0, 0, 0.4),
+                0 0 0 3px rgba(0, 212, 255, 0.3),
+                0 0 20px rgba(0, 212, 255, 0.4);
         }
 
         .about-text h3 {
@@ -914,16 +855,8 @@
                 display: flex;
             }
 
-            .profile-image {
-                width: 160px;
-                height: 160px;
-            }
-            
-            .hero-profile::before {
-                top: -12px;
-                left: -12px;
-                right: -12px;
-                bottom: -12px;
+            .about-profile-photo {
+                height: 300px;
             }
 
             .about-content {
@@ -979,16 +912,9 @@
                 padding: 0 15px;
             }
 
-            .profile-image {
-                width: 140px;
-                height: 140px;
-            }
-
-            .hero-profile::before {
-                top: -10px;
-                left: -10px;
-                right: -10px;
-                bottom: -10px;
+            .about-profile-photo {
+                height: 250px;
+                max-width: 280px;
             }
 
             .hero-content {
@@ -1062,9 +988,6 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-profile">
-                    <img src="profile.jpg" alt="Kenneth Feh - Senior Full-Stack Engineer" class="profile-image">
-                </div>
                 <div class="hero-text">
                     <h1>Kenneth Feh</h1>
                     <p class="subtitle">Senior Full-Stack Engineer</p>
@@ -1093,9 +1016,7 @@
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content fade-in">
                 <div class="about-image">
-                    <div class="about-image-placeholder">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
+                    <img src="profile.jpg" alt="Kenneth Feh - Senior Full-Stack Engineer" class="about-profile-photo">
                 </div>
                 <div class="about-text">
                     <h3>From Self-Taught to Senior Engineer</h3>
