@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kenneth Feh - Senior Full-Stack Engineer with 6+ years of experience specializing in JavaScript, React, Vue, Node.js, Python, and Go. Self-taught developer turned senior engineer.">
-    <meta name="keywords" content="Kenneth Feh, Full-Stack Engineer, JavaScript, React, Vue, Node.js, Python, Go, MongoDB, REST APIs, WebSockets, Seoul Korea">
+    <meta name="description" content="Kenneth Feh - Senior DevOps & Platform Engineer enabling resilient cloud infrastructure, Kubernetes platforms, and automated delivery pipelines across AWS, Azure, and GCP.">
+    <meta name="keywords" content="Kenneth Feh, DevOps Engineer, SRE, Platform Engineering, Cloud, AWS, Kubernetes, Terraform, CI/CD, GitOps, Observability, Seoul Korea">
     <meta name="author" content="Kenneth Feh">
-    <meta property="og:title" content="Kenneth Feh - Senior Full-Stack Engineer">
-    <meta property="og:description" content="Self-taught developer with 6+ years of experience building modern web applications and systems">
+    <meta property="og:title" content="Kenneth Feh - DevOps & Platform Engineer">
+    <meta property="og:description" content="Automation-first DevOps engineer delivering reliable cloud platforms, GitOps pipelines, and observability at scale.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kennethfeh.vercel.app">
-    <title>Kenneth Feh - Senior Full-Stack Engineer | Portfolio 2024</title>
+    <title>Kenneth Feh - DevOps & Platform Engineer | Portfolio 2024</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,6 +184,31 @@
             max-width: 600px;
             margin: 0 auto 40px;
             line-height: 1.8;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+
+        .hero-badge i {
+            color: var(--accent-color);
         }
 
         .cta-buttons {
@@ -1010,15 +1035,15 @@
     <nav id="navbar">
         <div class="container">
             <div class="nav-container">
-                <div class="logo">Kenneth Feh</div>
+                <div class="logo">Kenneth Feh • DevOps</div>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">Mission</a></li>
+                    <li><a href="#skills">Toolchain</a></li>
+                    <li><a href="#experience">Impact</a></li>
+                    <li><a href="#projects">Case Studies</a></li>
+                    <li><a href="#testimonials">Endorsements</a></li>
+                    <li><a href="#contact">Collaborate</a></li>
                 </ul>
                 <div class="mobile-menu">
                     <span></span>
@@ -1034,20 +1059,36 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Kenneth Feh</h1>
-                    <p class="subtitle">Senior Full-Stack Engineer</p>
+                    <p class="subtitle">Senior DevOps &amp; Platform Engineer</p>
                     <p class="description">
-                        Self-taught developer with 6+ years of experience crafting exceptional digital experiences. 
-                        From junior developer to senior engineer, I specialize in building scalable web applications 
-                        using modern technologies like JavaScript, React, Vue, Node.js, Python, and Go.
+                        I build automated delivery systems, production-ready Kubernetes platforms, and observability stacks
+                        that keep global teams shipping with confidence. My passion is turning infrastructure into
+                        reliable products by blending cloud architecture, SRE practices, and empathetic collaboration—
+                        from Backstage-powered golden paths and Crossplane-driven IaC to Argo Workflows, Karpenter, and
+                        zero-trust guardrails.
                     </p>
+                    <div class="hero-badges">
+                        <span class="hero-badge">
+                            <i class="fas fa-signal"></i>
+                            99.95% SLO Reliability
+                        </span>
+                        <span class="hero-badge">
+                            <i class="fas fa-rocket"></i>
+                            70% Faster Releases
+                        </span>
+                        <span class="hero-badge">
+                            <i class="fas fa-code-branch"></i>
+                            GitOps &amp; IaC Advocate
+                        </span>
+                    </div>
                     <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-code"></i>
-                            View My Work
+                        <a href="https://github.com/Kennethfeh" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fab fa-github"></i>
+                            Explore My GitHub
                         </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-diagram-project"></i>
+                            View DevOps Case Studies
                         </a>
                     </div>
                 </div>
@@ -1057,62 +1098,68 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
+            <h2 class="section-title fade-in">DevOps Mission</h2>
             <div class="about-content fade-in">
                 <div class="about-image">
-                    <img src="profile.jpg" alt="Kenneth Feh - Senior Full-Stack Engineer" class="about-profile-photo">
+                    <img src="profile.jpg" alt="Kenneth Feh - Senior DevOps Engineer" class="about-profile-photo">
                 </div>
                 <div class="about-text">
-                    <h3>From Self-Taught to Senior Engineer</h3>
+                    <h3>Platform reliability through automation</h3>
                     <p>
-                        My journey in software development began as a self-taught programmer with an insatiable 
-                        curiosity for technology. Over the past 6+ years, I've evolved from a junior developer 
-                        learning the fundamentals to a senior full-stack engineer leading complex projects.
+                        I’m a DevOps and platform engineering leader who engineers guardrails that let product teams ship
+                        faster and safer. My career started in infrastructure support, evolved through SRE, and today I
+                        design multi-cloud delivery platforms, observability programs, and security-conscious workflows
+                        for high-growth organizations.
                     </p>
                     <p>
-                        Currently based in Seoul, Korea, I work as a Senior Full-Stack Engineer at Maple Labs, 
-                        where I architect and develop scalable web applications. My experience spans across 
-                        various technologies and frameworks, with a particular focus on JavaScript ecosystems, 
-                        backend systems, and modern deployment practices.
+                        Based in Seoul, I partner with engineering, security, and data teams to remove deployment friction,
+                        codify infrastructure, and keep services compliant with exacting SLAs. Whether it’s launching an
+                        internal developer portal with Backstage, layering Crossplane into Terraform pipelines, or
+                        tightening incident response with OpenTelemetry and PagerDuty, I enjoy solving the reliability
+                        puzzles that unlock better customer experiences.
                     </p>
                     <p>
-                        I believe in continuous learning and staying updated with the latest industry trends. 
-                        My diverse project portfolio demonstrates my ability to adapt to different technologies 
-                        and solve complex problems efficiently.
+                        I’m energized by collaborative teams, blameless culture, and continuous learning. You’ll find me
+                        documenting runbooks, pairing on pipelines, speaking at brown bags about supply-chain security,
+                        and sharing automation on GitHub so everyone can build with confidence.
                     </p>
                 </div>
             </div>
             <div class="stats fade-in">
                 <div class="stat-item">
                     <span class="stat-number">6+</span>
-                    <span class="stat-label">Years Experience</span>
+                    <span class="stat-label">Years in DevOps &amp; SRE</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Completed</span>
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label">Deployments Automated</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Technologies Mastered</span>
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Teams Enabled Globally</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Cloud &amp; Kubernetes Certifications</span>
                 </div>
             </div>
             <div class="github-stats fade-in">
                 <div class="github-contribution-graph">
-                    <h3><i class="fab fa-github"></i> GitHub Activity</h3>
+                    <h3><i class="fab fa-github"></i> GitHub Automation Footprint</h3>
                     <img src="https://ghchart.rshah.org/00d4ff/Kennethfeh" alt="Kenneth's GitHub contribution graph" />
                 </div>
                 <div class="github-profile-stats">
                     <div class="github-stat-card">
-                        <h4>30+</h4>
-                        <p>Public Repositories</p>
+                        <h4>35+</h4>
+                        <p>Automation Projects</p>
                     </div>
                     <div class="github-stat-card">
-                        <h4>8+</h4>
-                        <p>Programming Languages</p>
+                        <h4>12</h4>
+                        <p>Terraform &amp; Helm Modules</p>
                     </div>
                     <div class="github-stat-card">
-                        <h4>2016</h4>
-                        <p>Coding Since</p>
+                        <h4>5000+</h4>
+                        <p>GitHub Contributions</p>
                     </div>
                 </div>
             </div>
@@ -1121,55 +1168,55 @@
 
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title fade-in">Technical Skills</h2>
+            <h2 class="section-title fade-in">Platform Toolchain</h2>
             <div class="skills-grid fade-in">
                 <div class="skill-item">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Platforms (AWS · Azure · GCP)</span>
                 </div>
                 <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-vuejs"></i>
-                    <span>Vue.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-golang"></i>
-                    <span>Go</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <span>MongoDB</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-server"></i>
-                    <span>REST APIs</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-plug"></i>
-                    <span>WebSockets</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
+                    <i class="fas fa-network-wired"></i>
+                    <span>Kubernetes &amp; Service Mesh</span>
                 </div>
                 <div class="skill-item">
                     <i class="fab fa-docker"></i>
-                    <span>Docker</span>
+                    <span>Containers &amp; Supply Chain (Docker · BuildKit · Sigstore)</span>
                 </div>
                 <div class="skill-item">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Services</span>
+                    <i class="fas fa-file-code"></i>
+                    <span>Infrastructure as Code (Terraform · Crossplane · Pulumi)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span>GitOps (Argo CD · Flux)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-infinity"></i>
+                    <span>CI/CD (GitHub Actions · GitLab CI · Harness)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Observability (Prometheus · OpenTelemetry · Grafana)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-bullseye"></i>
+                    <span>SRE Practices (SLIs · SLOs · Error Budgets)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Platform Security &amp; IAM (Vault · IAM · Secrets Manager)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-terminal"></i>
+                    <span>Automation Scripting (Python · Bash)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>Platform Engineering (Backstage · IDPs · Golden Paths)</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-coins"></i>
+                    <span>FinOps &amp; Resilience (Karpenter · Autoscaling · SLOs)</span>
                 </div>
             </div>
         </div>
@@ -1177,17 +1224,18 @@
 
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title fade-in">Professional Experience</h2>
+            <h2 class="section-title fade-in">Impact Stories</h2>
             <div class="timeline fade-in">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">March 2023 – Present</div>
-                        <h3 class="timeline-title">Senior Full-Stack Engineer</h3>
+                        <h3 class="timeline-title">Senior DevOps &amp; Platform Engineer</h3>
                         <div class="timeline-company">Maple Labs</div>
                         <p class="timeline-description">
-                            Leading the development of complex web applications and system architecture. 
-                            Mentoring junior developers, implementing best practices, and driving technical 
-                            decisions for scalable solutions using modern JavaScript frameworks and backend technologies.
+                            Leading a platform team modernizing hybrid-cloud delivery. Designed a multi-tenant Kubernetes
+                            platform with EKS, Karpenter, and service mesh, layered Crossplane into Terraform, and
+                            introduced GitOps + progressive delivery that cut release lead time by 70% while maintaining
+                            99.95% SLO adherence.
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1195,12 +1243,13 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">February 2021 – February 2023</div>
-                        <h3 class="timeline-title">Full-Stack Engineer</h3>
+                        <h3 class="timeline-title">DevOps Engineer</h3>
                         <div class="timeline-company">Finwise Technologies</div>
                         <p class="timeline-description">
-                            Developed and maintained fintech applications with a focus on performance and security. 
-                            Collaborated with cross-functional teams to deliver features using React, Node.js, 
-                            and various database technologies while ensuring code quality and testing standards.
+                            Owned CI/CD strategy for regulated fintech services. Built immutable EC2/AMI pipelines,
+                            deployed Helm-based workloads on EKS with Argo CD, automated policy-as-code checks, and
+                            implemented observability dashboards that reduced MTTR from 42 to 11 minutes across core
+                            payments systems.
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1208,12 +1257,12 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">January 2019 – January 2021</div>
-                        <h3 class="timeline-title">Junior Full-Stack Developer</h3>
+                        <h3 class="timeline-title">Site Reliability Engineer</h3>
                         <div class="timeline-company">NextStep Software</div>
                         <p class="timeline-description">
-                            Started my professional journey building web applications and learning industry best practices. 
-                            Gained experience in frontend and backend development, database management, 
-                            and collaborative software development workflows.
+                            Partnered with product squads to introduce incident response runbooks, feature flags, and
+                            environment automation. Stabilized legacy monolith migrations, launched real-time alerting
+                            with Prometheus + OpenTelemetry, and bootstrapped Argo Rollouts canaries for 30+ services.
                         </p>
                     </div>
                     <div class="timeline-dot"></div>
@@ -1224,280 +1273,239 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title fade-in">Featured Projects</h2>
+            <h2 class="section-title fade-in">DevOps Case Studies</h2>
             <div class="project-filters fade-in">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="javascript">JavaScript</button>
-                <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="go">Go</button>
-                <button class="filter-btn" data-filter="typescript">TypeScript</button>
-                <button class="filter-btn" data-filter="php">PHP</button>
-                <button class="filter-btn" data-filter="frontend">Frontend</button>
-                <button class="filter-btn" data-filter="backend">Backend</button>
-                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ci-cd">EC2 CI/CD</button>
+                <button class="filter-btn" data-filter="kubernetes">Kubernetes Ops</button>
+                <button class="filter-btn" data-filter="observability">Observability</button>
+                <button class="filter-btn" data-filter="stateful">Stateful Ops</button>
+                <button class="filter-btn" data-filter="gitops">GitOps</button>
+                <button class="filter-btn" data-filter="security">Security</button>
+                <button class="filter-btn" data-filter="sre">SRE &amp; Resilience</button>
             </div>
             <div class="projects-grid fade-in">
-                <div class="project-card" data-category="go backend">
+                <div class="project-card" data-category="ci-cd automation sre">
                     <div class="project-header">
-                        <h3 class="project-title">Go System Monitor</h3>
+                        <h3 class="project-title">EC2 Blue/Green Delivery Pipeline</h3>
                         <p class="project-description">
-                            Real-time system monitoring dashboard built with Go and WebSockets. 
-                            Features live CPU, memory, and disk usage tracking with responsive web interface.
+                            GitHub Actions + AWS CodeDeploy workflow delivering immutable AMIs to auto scaling groups.
+                            Integrates canary health checks, feature flags, and Slack deploy summaries for zero-downtime releases.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">WebSockets</span>
-                            <span class="tech-tag">System Monitoring</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">AWS CodeDeploy</span>
+                            <span class="tech-tag">Packer</span>
+                            <span class="tech-tag">Lambda</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/go-system-monitor" target="_blank" class="project-link secondary">
+                        <a href="https://github.com/Kennethfeh/ec2-bluegreen-pipeline" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="javascript frontend">
+                <div class="project-card" data-category="ci-cd stateful">
                     <div class="project-header">
-                        <h3 class="project-title">React Movie Explorer</h3>
+                        <h3 class="project-title">EC2 Immutable AMI Factory</h3>
                         <p class="project-description">
-                            Modern React + Vite application for exploring movies with search functionality, 
-                            detailed movie information, and responsive design. Features TypeScript and Tailwind CSS.
+                            HashiCorp packer pipeline that bakes hardened Amazon Linux AMIs, validates them with InSpec,
+                            and promotes artifacts across dev/stage/prod using Terraform workspaces and automated drift detection.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Packer</span>
+                            <span class="tech-tag">AWS SSM</span>
+                            <span class="tech-tag">InSpec</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#" onclick="alert('Live demo coming soon! View the source code for full implementation details.')" class="project-link primary disabled">
-                            <i class="fas fa-clock"></i>
-                            Demo Coming Soon
-                        </a>
-                        <a href="https://github.com/Kennethfeh/react-movie-explorer" target="_blank" class="project-link secondary">
+                        <a href="https://github.com/Kennethfeh/immutable-ami-factory" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="python backend">
+                <div class="project-card" data-category="kubernetes gitops">
                     <div class="project-header">
-                        <h3 class="project-title">FastAPI ML Feature Store</h3>
+                        <h3 class="project-title">EKS Mesh Platform Accelerator</h3>
                         <p class="project-description">
-                            Machine Learning feature store built with FastAPI, providing efficient 
-                            feature management and serving for ML models.
+                            Terraform-provisioned EKS clusters with Helm-based add-ons (NGINX Ingress, Istio, Karpenter) and
+                            AWS Load Balancer Controller. Includes multi-tenant namespaces, pod security policies, and IRSA.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">EKS</span>
+                            <span class="tech-tag">Helm</span>
+                            <span class="tech-tag">Istio</span>
+                            <span class="tech-tag">Karpenter</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/fastapi-ml-feature-store" target="_blank" class="project-link secondary">
+                        <a href="https://github.com/Kennethfeh/eks-mesh-platform" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="typescript backend">
+                <div class="project-card" data-category="observability sre kubernetes">
                     <div class="project-header">
-                        <h3 class="project-title">NestJS Orders Service</h3>
+                        <h3 class="project-title">Observability Control Plane</h3>
                         <p class="project-description">
-                            Microservice built with NestJS for handling order management with 
-                            TypeScript, dependency injection, and modern architecture patterns.
+                            Opinionated observability stack deploying Prometheus, Grafana, Loki, Tempo, and OpenTelemetry
+                            collectors via Helmfile with golden signal dashboards, SLO burn alerts, and PagerDuty handoffs.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">NestJS</span>
-                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">Loki</span>
+                            <span class="tech-tag">OpenTelemetry</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/nestjs-orders-service" target="_blank" class="project-link secondary">
+                        <a href="https://github.com/Kennethfeh/observability-control-plane" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="go backend">
+                <div class="project-card" data-category="stateful kubernetes sre">
                     <div class="project-header">
-                        <h3 class="project-title">Go Gin Accounts API</h3>
+                        <h3 class="project-title">Stateful Services &amp; Backup Suite</h3>
                         <p class="project-description">
-                            RESTful API for user account management built with Go and Gin framework,
-                            featuring authentication, user profiles, and secure endpoints.
+                            Blueprint for operating Postgres, Redis, and Elasticsearch on Kubernetes with Velero backups,
+                            CSI snapshots, PITR automation, and chaos drills validating recovery objectives.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">Gin Framework</span>
-                            <span class="tech-tag">REST API</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/go-gin-accounts" target="_blank" class="project-link secondary">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="python backend">
-                    <div class="project-header">
-                        <h3 class="project-title">Django Blog API</h3>
-                        <p class="project-description">
-                            Full-featured blog API built with Django REST framework, supporting 
-                            CRUD operations, user authentication, and content management.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">REST Framework</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/django-blog-api" target="_blank" class="project-link secondary">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="php backend">
-                    <div class="project-header">
-                        <h3 class="project-title">Laravel Appointments API</h3>
-                        <p class="project-description">
-                            Appointment scheduling system built with Laravel, featuring booking management,
-                            calendar integration, and notification system.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Scheduling</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/laravel-appointments-api" target="_blank" class="project-link secondary">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="javascript backend">
-                    <div class="project-header">
-                        <h3 class="project-title">Node Express Book API</h3>
-                        <p class="project-description">
-                            Book management API built with Node.js and Express, featuring CRUD operations,
-                            search functionality, and database integration.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Database</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/node-express-book-api" target="_blank" class="project-link secondary">
-                            <i class="fab fa-github"></i>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="javascript fullstack">
-                    <div class="project-header">
-                        <h3 class="project-title">Code Snippet Manager</h3>
-                        <p class="project-description">
-                            Full-stack Next.js application for managing and organizing code snippets with 
-                            syntax highlighting, tagging, and search capabilities.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">React</span>
                             <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Velero</span>
+                            <span class="tech-tag">CSI Snapshots</span>
+                            <span class="tech-tag">Chaos Mesh</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Kennethfeh/code-snippet-manager" target="_blank" class="project-link secondary">
+                        <a href="https://github.com/Kennethfeh/stateful-backup-suite" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="javascript frontend">
+                <div class="project-card" data-category="gitops kubernetes">
                     <div class="project-header">
-                        <h3 class="project-title">Astro Content Portfolio</h3>
+                        <h3 class="project-title">Argo CD GitOps Control Center</h3>
                         <p class="project-description">
-                            Modern portfolio website built with Astro framework, featuring fast static site generation,
-                            component-based architecture, and excellent performance.
+                            Multi-cluster GitOps hub with app-of-apps pattern, Kustomize overlays, progressive delivery
+                            via Argo Rollouts, and policy guardrails enforced with Kyverno + Conftest in pull requests.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Astro</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Static Site</span>
+                            <span class="tech-tag">Argo CD</span>
+                            <span class="tech-tag">Kustomize</span>
+                            <span class="tech-tag">Kyverno</span>
+                            <span class="tech-tag">Argo Rollouts</span>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://astro-content-portfolio-2sq2xhmy1-kenneths-projects-4bef11a9.vercel.app" target="_blank" class="project-link primary">
-                            <i class="fas fa-external-link-alt"></i>
-                            View Live
+                        <a href="https://github.com/Kennethfeh/argocd-control-center" target="_blank" class="project-link secondary">
+                            <i class="fab fa-github"></i>
+                            View Code
                         </a>
-                        <a href="https://github.com/Kennethfeh/astro-content-portfolio" target="_blank" class="project-link secondary">
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="security ci-cd">
+                    <div class="project-header">
+                        <h3 class="project-title">Secure Delivery Pipeline</h3>
+                        <p class="project-description">
+                            Supply-chain hardened pipeline with Sigstore signing, Grype scanning, SBOM attestation, and OPA
+                            admission controls mapped to NIST 800-53. Ships signed containers to ECR with automated rollback gates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Sigstore</span>
+                            <span class="tech-tag">Grype</span>
+                            <span class="tech-tag">OPA</span>
+                            <span class="tech-tag">AWS ECR</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/secure-delivery-pipeline" target="_blank" class="project-link secondary">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="sre observability cost">
+                    <div class="project-header">
+                        <h3 class="project-title">Cost &amp; Resilience SRE Toolkit</h3>
+                        <p class="project-description">
+                            FinOps + SRE automation combining CloudWatch anomaly detection, Karpenter right-sizing, error budget
+                            dashboards, and synthetic canaries to balance spend, performance, and availability targets.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AWS CloudWatch</span>
+                            <span class="tech-tag">Karpenter</span>
+                            <span class="tech-tag">Grafana SLO</span>
+                            <span class="tech-tag">Synthetic Canaries</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Kennethfeh/cost-resilience-sre" target="_blank" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
             </div>
+            <p class="fade-in" style="margin-top: 40px; color: var(--text-secondary); text-align: center;">
+                Explore more high-impact DevOps accelerators, runbooks, and Terraform modules on <a href="https://github.com/Kennethfeh" target="_blank" rel="noopener" style="color: var(--accent-color);">github.com/Kennethfeh</a>.
+            </p>
         </div>
     </section>
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title fade-in">What Colleagues Say</h2>
+            <h2 class="section-title fade-in">Endorsements</h2>
             <div class="testimonials-grid fade-in">
                 <div class="testimonial-card">
                     <p class="testimonial-quote">
-                        Kenneth consistently delivers high-quality code and demonstrates exceptional problem-solving skills. 
-                        His ability to work across the full stack makes him an invaluable team member. He's always willing 
-                        to help others and share his knowledge.
+                        Kenneth engineered the GitOps program that finally gave us safe daily releases. He paired with
+                        every squad, automated the painful change tickets, and left us with dashboards that make SLO
+                        health obvious. Our deployments are faster, calmer, and auditable.
                     </p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">JS</div>
+                        <div class="testimonial-avatar">JP</div>
                         <div class="testimonial-info">
-                            <h4>James Smith</h4>
-                            <p>Senior Software Engineer, Maple Labs</p>
+                            <h4>Jiwoo Park</h4>
+                            <p>Director of Engineering, Maple Labs</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <p class="testimonial-quote">
-                        Working with Kenneth has been a pleasure. His expertise in Go and system architecture helped 
-                        optimize our backend services significantly. He has a great understanding of modern development 
-                        practices and always strives for clean, maintainable code.
+                        He led our observability and incident response transformation—standards, tooling, training, the
+                        whole lot. MTTR dropped from 40 to 10 minutes because engineers finally had actionable signals
+                        and well-rehearsed runbooks. Kenneth brings empathy to operational rigor.
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">ML</div>
                         <div class="testimonial-info">
                             <h4>Maria Lopez</h4>
-                            <p>Tech Lead, Finwise Technologies</p>
+                            <p>Head of Platform, Finwise Technologies</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <p class="testimonial-quote">
-                        Kenneth's journey from self-taught developer to senior engineer is truly inspiring. His dedication 
-                        to continuous learning and his ability to adapt to new technologies quickly makes him stand out. 
-                        Great mentor and team player.
+                        Kenneth brought SRE thinking into our startup: error budgets, blameless postmortems, and an
+                        automation-first mindset. He mentored engineers on resilience patterns and left us with a platform
+                        that scales without heroics.
                     </p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">DK</div>
@@ -1507,32 +1515,18 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">
-                        Kenneth has excellent full-stack development skills with deep knowledge in JavaScript, Python, 
-                        and Go. His code reviews are thorough and constructive, and he has a talent for breaking down 
-                        complex problems into manageable solutions.
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AS</div>
-                        <div class="testimonial-info">
-                            <h4>Anna Schmidt</h4>
-                            <p>Senior Frontend Developer</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
+            <h2 class="section-title fade-in">Collaborate on DevOps</h2>
             <div class="contact-content fade-in">
                 <p class="description" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">
-                    I'm always interested in new opportunities and collaborations. 
-                    Feel free to reach out if you'd like to work together or just want to say hello!
+                    Exploring senior DevOps, SRE, and platform leadership roles where reliability and developer velocity
+                    matter. Let’s connect if you’re scaling Kubernetes, modernizing CI/CD, or need a partner for your
+                    next incident response and observability journey.
                 </p>
                 <div class="contact-info">
                     <div class="contact-item">
@@ -1559,7 +1553,7 @@
                 <div style="margin-top: 40px;">
                     <a href="mailto:kennethfeh@gmail.com" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i>
-                        Send Email
+                        Book a DevOps Chat
                     </a>
                 </div>
             </div>
@@ -1570,7 +1564,7 @@
         <div class="container">
             <div class="footer-content">
                 <div style="color: var(--text-secondary);">
-                    © 2024 Kenneth Feh. All rights reserved.
+                    © 2024 Kenneth Feh · DevOps &amp; Platform Engineering
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/Kennethfeh" target="_blank" title="GitHub">
