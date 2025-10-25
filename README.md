@@ -1,51 +1,139 @@
-# Kenneth Feh - DevOps Portfolio
+# Kenneth Feh - Portfolio Website
 
-A single-page portfolio that documents my transition into DevOps and platform engineering. The site focuses on honest storytelling, highlighting hands-on labs, project write-ups, and the operations background that fuels my move into cloud automation.
+A modern, professional portfolio website for Kenneth Feh, Senior Full-Stack Engineer.
 
-## What You’ll Find
-- **Intro & About** - why I’m pivoting from recreation centre coordination and teaching into DevOps.
-- **Skills Snapshot** - the toolchain I’m actively learning and where I’ve applied it.
-- **Project Experience Timeline** - self-directed work alongside prior operations roles.
-- **Hands-on Projects** - detailed case studies with GitHub links for EC2 foundations, ECS Fargate, EKS + Helm, and observability stacks.
-- **Learning Highlights & Contact** - reflections on what each build taught me plus ways to collaborate.
+## Features
 
-## Featured Projects
-- [AWS EC2 Foundations Lab](https://github.com/Kennethfeh/devops-journey/tree/main/project-1-foundation) - Terraform-based VPC, IAM guardrails, and EC2 automation with architecture notes and teardown scripts.
-- [ECS Fargate Service Platform](https://github.com/Kennethfeh/devops-journey/tree/main/project-2-containers) - container build pipeline, ECS/Fargate deployment, load balancing, and secrets handling.
-- [EKS & Helm Platform Playbook](https://github.com/Kennethfeh/devops-journey/tree/main/project-3-kurbernetes) - cluster provisioning, Helm add-ons, GitOps onboarding, and RBAC practices.
-- [CloudWatch Observability Starter](https://github.com/Kennethfeh/devops-journey/tree/main/projecct-4-monitoring) - metrics, logs, alarms, and runbooks for tracing ECS workloads.
-- [Observability Control Plane](https://github.com/Kennethfeh/devops-journey/tree/main/project-5-monitoring-advanced) - Prometheus, Loki, Tempo, Grafana, and OpenTelemetry collectors running on Kubernetes.
+- **Modern Design**: Clean, dark theme with tech-focused aesthetic
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Interactive Elements**: Smooth animations, hover effects, and particle background
+- **Performance Optimized**: Single HTML file with embedded CSS/JS for fast loading
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
 
-## Skills In Context
-- **Cloud & Containers** - AWS core services, ECS/Fargate, Amazon EKS, and containerization with Docker.
-- **Infrastructure as Code** - Terraform modules, environment bootstrapping, and GitOps experiments with Argo CD and Flux.
-- **CI/CD & Automation** - GitHub Actions workflows that build, test, and deploy lab environments.
-- **Observability & SRE** - CloudWatch dashboards, Prometheus/Grafana stacks, incident playbooks, and continuous learning around SLIs/SLOs.
-- **Collaboration Mindset** - communication, documentation, and coordination skills gained from recreation centre operations and teaching roles.
+## Sections
+
+- **Hero**: Compelling introduction with call-to-action buttons
+- **About**: Personal journey from self-taught to senior engineer
+- **Skills**: Technology stack with interactive icons
+- **Experience**: Professional timeline with detailed descriptions
+- **Projects**: Featured projects with GitHub links and tech stack badges
+- **Contact**: Multiple ways to get in touch
+
+## Technologies Used
+
+- HTML5 (Semantic Structure)
+- CSS3 (Custom Properties, Grid, Flexbox, Animations)
+- Vanilla JavaScript (Interactive features, smooth scrolling)
+- Google Fonts (Inter font family)
+- Font Awesome Icons
 
 ## Local Development
-Serve the static site with any web server. One option:
+
+To test the website locally:
 
 ```bash
-# From the project directory
-cd my-porfolio
+# Navigate to the project directory
+cd kenneth-portfolio
+
+# Start a local server
 python3 -m http.server 8000
-# Visit http://localhost:8000 in your browser
+
+# Open in browser
+http://localhost:8000
 ```
 
-## Deployment
-The site is static. Deploy it with Vercel, GitHub Pages, Netlify, or any static hosting provider. For Vercel CLI:
+## Deployment Instructions
 
-```bash
-vercel
-vercel --prod
+### Option 1: Deploy with Vercel CLI (Recommended)
+
+1. **Install Vercel CLI**
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Login to Vercel**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy the Website**
+   ```bash
+   # From the kenneth-portfolio directory
+   vercel
+   
+   # Follow the prompts:
+   # - Set up and deploy? Y
+   # - Which scope? (select your account)
+   # - Link to existing project? N
+   # - Project name: kenneth-portfolio (or your preferred name)
+   # - In which directory is your code located? ./
+   ```
+
+4. **Production Deployment**
+   ```bash
+   vercel --prod
+   ```
+
+### Option 2: Deploy via Vercel Dashboard
+
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "New Project"
+3. Import your Git repository or drag and drop the folder
+4. Configure project settings:
+   - Framework Preset: Other
+   - Root Directory: ./
+   - Build Command: (leave empty)
+   - Output Directory: (leave empty)
+5. Click "Deploy"
+
+### Option 3: Deploy from GitHub
+
+1. Push your code to a GitHub repository
+2. Connect your GitHub account to Vercel
+3. Import the repository
+4. Deploy automatically
+
+## Custom Domain Setup
+
+After deployment, to add a custom domain:
+
+1. Go to your project dashboard in Vercel
+2. Click on "Settings" tab
+3. Select "Domains" from the sidebar
+4. Add your custom domain
+5. Configure DNS settings as instructed by Vercel
+
+## File Structure
+
+```
+kenneth-portfolio/
+├── index.html          # Main website file
+├── README.md          # Project documentation
+└── (deployed files)   # Generated by Vercel
 ```
 
-## Housekeeping
-- The repository is currently named `my-porfolio` (typo). Renaming it to `my-portfolio` keeps things polished.
-- Update the project links above if you restructure folders or publish new labs.
+## Browser Support
 
-## Contact
-- Email: [kennethfeh@gmail.com](mailto:kennethfeh@gmail.com)
-- GitHub: [github.com/Kennethfeh](https://github.com/Kennethfeh)
-- Location: Seoul, Korea
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## Performance Features
+
+- Single file architecture for minimal HTTP requests
+- Optimized images and assets
+- Efficient CSS animations
+- Lazy loading for better performance
+- Minimal JavaScript footprint
+
+## Contact Information
+
+- **Email**: kennethfeh@gmail.com
+- **GitHub**: [github.com/Kennethfeh](https://github.com/Kennethfeh)
+- **Location**: Seoul, Korea
+
+---
+
+Built with ❤️ by Kenneth Feh
