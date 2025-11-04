@@ -1,6 +1,6 @@
 # Kenneth Feh - Portfolio Website
 
-A modern, professional portfolio website for Kenneth Feh, Senior Full-Stack Engineer.
+A modern, professional portfolio website for Kenneth Feh, Full-Stack Developer with 3 years of experience.
 
 ## Features
 
