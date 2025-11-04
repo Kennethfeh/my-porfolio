@@ -13,7 +13,7 @@ A modern, professional portfolio website for Kenneth Feh, Full-Stack Developer w
 ## Sections
 
 - **Hero**: Compelling introduction with call-to-action buttons
-- **About**: Personal journey from self-taught to senior engineer
+- **About**: Personal journey from self-taught learner to full-stack developer
 - **Skills**: Technology stack with interactive icons
 - **Experience**: Professional timeline with detailed descriptions
 - **Projects**: Featured projects with GitHub links and tech stack badges
