@@ -12,11 +12,11 @@ CORE STRENGTHS
 - Quality & Collaboration: Jest, Playwright, Vitest, Storybook, GitHub Actions, trunk-based Git, design reviews, mentoring.
 
 EXPERIENCE
-Maple Labs — Full-Stack Developer | Seoul, Korea (Hybrid) | Apr 2023 – Present
-- Lead development of onboarding workflows, subscription management, and analytics dashboards for the Maple SaaS suite with Next.js, TypeScript, Tailwind CSS, and GraphQL-backed Node.js services.
+Lemon.io — Full-Stack Developer | Seoul, Korea (Hybrid) | Jan 2024 – Dec 2024
+- Shipped onboarding flows, subscription management, and analytics dashboards for the Lemon.io marketplace using Next.js, TypeScript, Tailwind CSS, and GraphQL-backed Node.js services.
 - Built a design-system-driven component library, reducing new view build time by 35% and improving accessibility scores to 98+ in Lighthouse.
 - Introduced Playwright smoke tests and Vercel preview checks that cut post-release UI bugs by 40%.
-- Partner with product and CX on instrumentation, ensuring every feature ships with metrics, feature flags, and rollback plans.
+- Partnered with product and CX on instrumentation, ensuring every feature shipped with metrics, feature flags, and rollback plans.
 
 Finwise Technologies — Full-Stack Developer | Remote | Feb 2022 – Mar 2023
 - Delivered customer billing portals and compliance tooling using React, Chakra UI, and NestJS APIs with PostgreSQL + Redis.
