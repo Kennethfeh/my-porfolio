@@ -612,6 +612,66 @@
             overflow: hidden;
         }
 
+        .project-figma {
+            position: relative;
+            padding-top: 56.25%;
+            margin: 0 30px 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .project-figma iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .project-figma-note {
+            margin: 0 30px 30px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .project-figma-note i {
+            color: var(--accent-color);
+        }
+
+        .project-live {
+            margin: 0 30px 20px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding: 14px 18px;
+            border-radius: 14px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .project-live i {
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+
+        .project-live a {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .project-live a:hover {
+            text-decoration: underline;
+        }
+
         .project-header {
             padding: 30px;
             background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
@@ -647,7 +707,8 @@
         .project-links {
             padding: 0 30px 30px;
             display: flex;
-            gap: 15px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -684,14 +745,19 @@
         }
 
         .project-link.secondary {
-            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: var(--text-secondary);
             font-size: 0.85rem;
-            opacity: 0.8;
+            padding: 10px 16px;
+            transition: all 0.3s ease;
         }
 
         .project-link.secondary:hover {
             color: var(--accent-color);
-            opacity: 1;
+            border-color: rgba(0, 212, 255, 0.4);
+            background: rgba(0, 212, 255, 0.06);
         }
 
         .project-link.primary.disabled {
@@ -1301,8 +1367,7 @@
                     <div class="project-header">
                         <h3 class="project-title">CloudSync Landing Blueprint</h3>
                         <p class="project-description">
-                            Marketing site + blueprint detailing sitemap, responsive grids, and motion cues. Paired with `/blueprint`
-                            + `/docs` to increase launch conversions by 42% and reduce support tickets through developer-ready specs.
+                            Marketing site, `/blueprint` handoff, and `/docs` workspace hosted on Vercel so hiring teams can click through the full CloudSync journey, responsive grids, and motion cues exactly as stakeholders see them.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Next.js</span>
@@ -1310,16 +1375,42 @@
                             <span class="tech-tag">Design System Docs</span>
                         </div>
                     </div>
+                    <div class="project-live">
+                        <i class="fas fa-satellite-dish"></i>
+                        <div>
+                            <strong>Live on Vercel:</strong>
+                            <a href="https://cloudsync-landing.vercel.app" target="_blank" rel="noopener noreferrer">cloudsync-landing.vercel.app</a>
+                        </div>
+                    </div>
+                    <div class="project-figma">
+                        <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fgamemaker-cloudsync%2FCloudSync-Landing-Blueprint%3Ftype%3Ddesign" allowfullscreen loading="lazy" title="CloudSync Landing Blueprint Figma preview"></iframe>
+                    </div>
+                    <p class="project-figma-note">
+                        <i class="fab fa-figma"></i>
+                        Live CloudSync blueprint inside Figma so recruiters can explore sections, flows, and annotations without leaving the portfolio.
+                    </p>
                     <div class="project-links">
-                        <a href="https://cloudsync-landing.vercel.app" target="_blank" class="project-link primary">
+                        <a href="https://cloudsync-landing.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link primary">
                             <i class="fas fa-external-link-alt"></i>
-                            View Live
+                            Open Live on Vercel
                         </a>
-                        <a href="https://github.com/Kennethfeh/cloudsync-landing" target="_blank" class="project-link primary">
+                        <a href="/projects/cloudsync" class="project-link secondary">
+                            <i class="fas fa-folder-open"></i>
+                            Case Study
+                        </a>
+                        <a href="https://cloudsync-landing.vercel.app/blueprint" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-sitemap"></i>
+                            Blueprint Route
+                        </a>
+                        <a href="https://github.com/Kennethfeh/cloudsync-landing/tree/main/docs" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-book"></i>
+                            Design Docs
+                        </a>
+                        <a href="https://github.com/Kennethfeh/cloudsync-landing" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Repository
                         </a>
-                        <a href="https://www.figma.com/file/gamemaker-cloudsync/CloudSync-Landing-Blueprint?type=design" target="_blank" class="project-link secondary">
+                        <a href="https://www.figma.com/file/gamemaker-cloudsync/CloudSync-Landing-Blueprint?type=design" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-figma"></i>
                             View Figma
                         </a>
@@ -1330,8 +1421,7 @@
                     <div class="project-header">
                         <h3 class="project-title">TaskFlow Dashboard Suite</h3>
                         <p class="project-description">
-                            Enterprise workflow marketing page + dashboard UI with `/blueprint` IA, component APIs, and docs. Reduced
-                            handoff cycle time from two days to same-day and cut SLA misses by 36% using alert guidelines and tokens.
+                            Enterprise workflow marketing hub + dashboard UI deployed on Vercel, including `/blueprint` IA, component APIs, and docs recruiters can audit to see how I shorten dev handoff cycles by 36%.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Next.js</span>
@@ -1339,16 +1429,42 @@
                             <span class="tech-tag">Developer Handoff</span>
                         </div>
                     </div>
+                    <div class="project-live">
+                        <i class="fas fa-satellite-dish"></i>
+                        <div>
+                            <strong>Live on Vercel:</strong>
+                            <a href="https://taskflow-dashboard-ktd7.vercel.app" target="_blank" rel="noopener noreferrer">taskflow-dashboard-ktd7.vercel.app</a>
+                        </div>
+                    </div>
+                    <div class="project-figma">
+                        <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fgamemaker-taskflow%2FTaskFlow-Dashboard-Spec%3Ftype%3Ddesign" allowfullscreen loading="lazy" title="TaskFlow Dashboard Figma preview"></iframe>
+                    </div>
+                    <p class="project-figma-note">
+                        <i class="fab fa-figma"></i>
+                        TaskFlow's dashboard components render live here, giving recruiters immediate access to the entire Figma specification.
+                    </p>
                     <div class="project-links">
-                        <a href="https://taskflow-dashboard-lvsl.vercel.app" target="_blank" class="project-link primary">
+                        <a href="https://taskflow-dashboard-ktd7.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link primary">
                             <i class="fas fa-external-link-alt"></i>
-                            View Live
+                            Open Live on Vercel
                         </a>
-                        <a href="https://github.com/Kennethfeh/-taskflow-dashboard" target="_blank" class="project-link primary">
+                        <a href="/projects/taskflow" class="project-link secondary">
+                            <i class="fas fa-folder-open"></i>
+                            Case Study
+                        </a>
+                        <a href="https://taskflow-dashboard-ktd7.vercel.app/blueprint" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-route"></i>
+                            Blueprint Route
+                        </a>
+                        <a href="https://github.com/Kennethfeh/taskflow-dashboard/tree/main/docs" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-book"></i>
+                            Design Docs
+                        </a>
+                        <a href="https://github.com/Kennethfeh/taskflow-dashboard" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Repository
                         </a>
-                        <a href="https://www.figma.com/file/gamemaker-taskflow/TaskFlow-Dashboard-Spec?type=design" target="_blank" class="project-link secondary">
+                        <a href="https://www.figma.com/file/gamemaker-taskflow/TaskFlow-Dashboard-Spec?type=design" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-figma"></i>
                             View Figma
                         </a>
@@ -1359,8 +1475,7 @@
                     <div class="project-header">
                         <h3 class="project-title">Horizon Fitness Experience</h3>
                         <p class="project-description">
-                            Hybrid fitness marketing + service experience showing schedule modules, typography, and gradients. `/blueprint`
-                            shares flows, grids, and motion behaviors that lifted trial-to-member conversions by 31%.
+                            Hybrid fitness marketing + service experience deployed on Vercel with `/blueprint` routes that walk through schedule modules, typography, gradients, and flows that boosted trial-to-member conversions by 31%.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Next.js</span>
@@ -1368,16 +1483,42 @@
                             <span class="tech-tag">Responsive Layouts</span>
                         </div>
                     </div>
+                    <div class="project-live">
+                        <i class="fas fa-satellite-dish"></i>
+                        <div>
+                            <strong>Live on Vercel:</strong>
+                            <a href="https://horizon-fitness.vercel.app" target="_blank" rel="noopener noreferrer">horizon-fitness.vercel.app</a>
+                        </div>
+                    </div>
+                    <div class="project-figma">
+                        <iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fgamemaker-horizon%2FHorizon-Fitness-Systems%3Ftype%3Ddesign" allowfullscreen loading="lazy" title="Horizon Fitness Figma preview"></iframe>
+                    </div>
+                    <p class="project-figma-note">
+                        <i class="fab fa-figma"></i>
+                        Horizon's service flows are now embedded, so hiring teams can scrub through layouts, grids, and documentation directly in the All Work gallery.
+                    </p>
                     <div class="project-links">
-                        <a href="https://horizon-fitness.vercel.app" target="_blank" class="project-link primary">
+                        <a href="https://horizon-fitness.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link primary">
                             <i class="fas fa-external-link-alt"></i>
-                            View Live
+                            Open Live on Vercel
                         </a>
-                        <a href="https://github.com/Kennethfeh/horizon-fitness" target="_blank" class="project-link primary">
+                        <a href="/projects/horizon" class="project-link secondary">
+                            <i class="fas fa-folder-open"></i>
+                            Case Study
+                        </a>
+                        <a href="https://horizon-fitness.vercel.app/blueprint" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-layer-group"></i>
+                            Blueprint Route
+                        </a>
+                        <a href="https://github.com/Kennethfeh/horizon-fitness/tree/main/docs" target="_blank" rel="noopener noreferrer" class="project-link secondary">
+                            <i class="fas fa-book"></i>
+                            Design Docs
+                        </a>
+                        <a href="https://github.com/Kennethfeh/horizon-fitness" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-github"></i>
                             View Repository
                         </a>
-                        <a href="https://www.figma.com/file/gamemaker-horizon/Horizon-Fitness-Systems?type=design" target="_blank" class="project-link secondary">
+                        <a href="https://www.figma.com/file/gamemaker-horizon/Horizon-Fitness-Systems?type=design" target="_blank" rel="noopener noreferrer" class="project-link secondary">
                             <i class="fab fa-figma"></i>
                             View Figma
                         </a>

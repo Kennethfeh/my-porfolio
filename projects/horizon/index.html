@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horizon Fitness Experience · Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060608;
+      --card: #11131b;
+      --accent: #f97316;
+      --accent-2: #facc15;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, rgba(249, 115, 22, 0.2), transparent 60%) var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 24px 80px;
+    }
+
+    a { color: inherit; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    .hero { margin-top: 24px; }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    h1 { font-size: clamp(2.3rem, 5vw, 3.5rem); margin-bottom: 16px; }
+
+    .lead { max-width: 720px; font-size: 1.1rem; color: var(--muted); }
+
+    .cta-group { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 40px; }
+
+    .btn {
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-primary { background: linear-gradient(120deg, var(--accent), var(--accent-2)); color: #0b0b0b; }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .grid { display: grid; gap: 20px; margin-bottom: 40px; }
+
+    @media (min-width: 768px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .split { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    ul { color: var(--muted); padding-left: 20px; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="/">← Back to portfolio</a>
+
+    <section class="hero">
+      <p class="eyebrow">Case Study · Marketing + Service</p>
+      <h1>Horizon Fitness Experience</h1>
+      <p class="lead">
+        Crafted a hybrid fitness marketing + service experience with module-based schedule UI, typography, gradients, and `/blueprint`
+        walkthroughs that showed how to scale across devices. The system improved trial-to-member conversion by grounding the story in flows.
+      </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness-git-main-kenneths-projects-4bef11a9.vercel.app">View live on Vercel</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness-git-main-kenneths-projects-4bef11a9.vercel.app/blueprint">Blueprint route</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/horizon-fitness/tree/main/docs">Docs folder</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/horizon-fitness">GitHub repository</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/gamemaker-horizon/Horizon-Fitness-Systems?type=design">Figma system</a>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <div class="card">
+        <h3>Brief</h3>
+        <p>Design a unified marketing + service layer for a premium fitness brand with emphasis on schedule clarity, brand gradients, and onboarding modules.</p>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <ul>
+          <li>Solo product + marketing designer</li>
+          <li>Content strategy + flow mapping</li>
+          <li>Design system + motion specs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Deliverables</h3>
+        <ul>
+          <li>Marketing page + interactive modules</li>
+          <li>`/blueprint` annotated flow</li>
+          <li>Docs describing tokens + gradients</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid split">
+      <div class="card">
+        <h3>Highlights</h3>
+        <ul>
+          <li>Documented responsive grids and typography scales that kept marketing + logged-in surfaces aligned.</li>
+          <li>Schedule module demonstrates multi-state components (idle, hover, booked) with tone + accessibility cues.</li>
+          <li>Blueprint page mirrors the Figma walkthrough with gradients, imagery rules, and animation timings.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Review Checklist</h3>
+        <ul>
+          <li>Scan the live site for storytelling, imagery, and CTA rhythm.</li>
+          <li>Jump to `/blueprint` for IA, responsive specs, and developer notes.</li>
+          <li>Open docs + Figma to see tokens, typography, and gradient usage guidelines.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>Part of the static portfolio so recruiters can explore case studies before opening the live builds · Updated October 2024.</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudSync Landing Blueprint · Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #050505;
+      --card-bg: #101014;
+      --accent: #00d4ff;
+      --accent-alt: #6366f1;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+      --gradient: linear-gradient(135deg, var(--accent), var(--accent-alt));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, rgba(99, 102, 241, 0.2), transparent 60%), var(--primary-bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      padding: 24px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: left;
+      padding: 40px 0 24px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin: 10px 0 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0 40px;
+    }
+
+    .btn {
+      border-radius: 10px;
+      padding: 14px 22px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+    }
+
+    ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="back-link" href="/">
+        ← Back to portfolio
+      </a>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Case Study · Marketing System</p>
+      <h1>CloudSync Landing Blueprint</h1>
+      <p class="lead">
+        Reimagined the CloudSync marketing journey with a responsive landing page, `/blueprint` handoff route, and `docs` workspace
+        so engineers could ship the experience without a separate spec. The system tightened launch messaging and raised conversion confidence.
+      </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://cloudsync-landing.vercel.app">
+          View live on Vercel
+        </a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://cloudsync-landing.vercel.app/blueprint">
+          Open blueprint route
+        </a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/cloudsync-landing/tree/main/docs">
+          Documentation folder
+        </a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/cloudsync-landing">
+          GitHub repository
+        </a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/gamemaker-cloudsync/CloudSync-Landing-Blueprint?type=design">
+          Figma blueprint
+        </a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Engagement Outcome</h3>
+        <p>Full funnel narrative that lifted marketing-to-trial conversions while reducing dev QA because every module maps to tokens and spacing rules documented in `/docs`.</p>
+      </div>
+      <div class="card">
+        <h3>Role</h3>
+        <ul>
+          <li>Research + sitemap definition</li>
+          <li>Design system + responsive grids</li>
+          <li>Developer handoff + documentation</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Deliverables</h3>
+        <ul>
+          <li>Marketing landing page</li>
+          <li>`/blueprint` annotated walkthrough</li>
+          <li>`docs/design-system.md` + `architecture.md`</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="split">
+      <div class="card">
+        <h3>Process Notes</h3>
+        <ul>
+          <li>Interview prompts shaped the sitemap and information architecture prior to pushing pixels.</li>
+          <li>System tokens unified marketing + product UI so cards, typography, and buttons reuse the same primitives.</li>
+          <li>Added motion + ARIA notes inside `/blueprint` so engineers see intent without chasing extra specs.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How Recruiters Should Explore</h3>
+        <ul>
+          <li>Start on the live Vercel site, then jump to `/blueprint` for IA, grids, and motion behaviors.</li>
+          <li>Open the docs folder on GitHub to inspect token naming and spacing rationale.</li>
+          <li>Use the Figma link for deep component inspection or to review the animation annotations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Built with static HTML so it deploys alongside the primary portfolio on Vercel. Updated October 2024.
+    </footer>
+  </div>
+</body>
+</html>
