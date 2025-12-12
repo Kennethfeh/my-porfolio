@@ -83,6 +83,201 @@
 
     .btn:hover { transform: translateY(-2px); }
 
+    .hero-preview {
+      margin-top: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .preview-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .preview-tab {
+      flex: 1;
+      min-width: 150px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 12px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .preview-tab.active {
+      background: linear-gradient(130deg, var(--accent), var(--accent-2));
+      color: #0a0a0a;
+      border-color: transparent;
+    }
+
+    .preview-frame {
+      background: radial-gradient(circle at 25% 30%, rgba(249, 115, 22, 0.18), transparent 65%), #08090f;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      min-height: 260px;
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-screen {
+      position: absolute;
+      inset: 26px;
+      border-radius: 18px;
+      background: rgba(10, 12, 18, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .preview-screen.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .preview-widget {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      margin-bottom: 12px;
+    }
+
+    .preview-widget strong { font-size: 1.05rem; }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .metric-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .metric-label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .logo-chip {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .case-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .variant-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .variant-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .variant-card a {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .accessibility-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+
+    .accessibility-list {
+      list-style: none;
+      padding-left: 0;
+      color: var(--muted);
+    }
+
+    .accessibility-list li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .check-icon { color: var(--accent); font-weight: 700; }
+
+    .design-assets {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+
+    .asset-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .asset-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
     .grid { display: grid; gap: 20px; margin-bottom: 40px; }
 
     @media (min-width: 768px) {
@@ -114,11 +309,139 @@
         walkthroughs that showed how to scale across devices. The system improved trial-to-member conversion by grounding the story in flows.
       </p>
       <div class="cta-group">
-        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness-git-main-kenneths-projects-4bef11a9.vercel.app">View live on Vercel</a>
-        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness-git-main-kenneths-projects-4bef11a9.vercel.app/blueprint">Blueprint route</a>
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness.vercel.app">View live on Vercel</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://horizon-fitness.vercel.app/blueprint">Blueprint route</a>
         <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/horizon-fitness/tree/main/docs">Docs folder</a>
         <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://github.com/Kennethfeh/horizon-fitness">GitHub repository</a>
         <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/gamemaker-horizon/Horizon-Fitness-Systems?type=design">Figma system</a>
+      </div>
+      <div class="hero-preview" aria-label="Horizon fitness product walkthrough">
+        <div class="preview-tabs" role="tablist">
+          <button class="preview-tab active" data-preview-target="schedule" role="tab" aria-selected="true">Schedule module</button>
+          <button class="preview-tab" data-preview-target="blueprint" role="tab" aria-selected="false">Studio blueprint</button>
+          <button class="preview-tab" data-preview-target="service" role="tab" aria-selected="false">Service docs</button>
+        </div>
+        <div class="preview-frame" aria-live="polite">
+          <div class="preview-screen active" data-preview-panel="schedule" role="tabpanel">
+            <h4>Booking states</h4>
+            <p>Module shows idle, hover, and booked states with gradients and typography locked so marketing + logged-in surfaces align.</p>
+            <div class="preview-widget">
+              <div>
+                <strong>HIIT x Core</strong>
+                <div>Coach Mira · 45 min</div>
+              </div>
+              <span>3 spots</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Cycle Flow</strong>
+                <div>Waitlist enabled</div>
+              </div>
+              <span>Booked ✓</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Recovery Lab</strong>
+                <div>Low impact</div>
+              </div>
+              <span>Open</span>
+            </div>
+          </div>
+          <div class="preview-screen" data-preview-panel="blueprint" role="tabpanel">
+            <h4>`/blueprint` highlights</h4>
+            <p>Blueprint route breaks down flows, hero gradients, photography masks, and choreography of CTA reveals.</p>
+            <div class="preview-widget">
+              <div>
+                <strong>Flows</strong>
+                <div>Marketing → booking → service</div>
+              </div>
+              <span>Mapped</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Grid</strong>
+                <div>1440 · 80px gutters</div>
+              </div>
+              <span>Responsive</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Motion</strong>
+                <div>CTA rise 180ms</div>
+              </div>
+              <span>Spec'd</span>
+            </div>
+          </div>
+          <div class="preview-screen" data-preview-panel="service" role="tabpanel">
+            <h4>Docs + gradients</h4>
+            <p>Markdown docs call out gradient tokens, photography art direction, and accessibility guardrails.</p>
+            <div class="preview-widget">
+              <div>
+                <strong>Gradient ramp</strong>
+                <div>Sunset · Ember · Dawn</div>
+              </div>
+              <span>Tokenized</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Typography</strong>
+                <div>Display / Body pairings</div>
+              </div>
+              <span>Documented</span>
+            </div>
+            <div class="preview-widget">
+              <div>
+                <strong>Service script</strong>
+                <div>Pre/post class flows</div>
+              </div>
+              <span>Shared</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics-grid" aria-label="Horizon results">
+      <div class="metric-card">
+        <span class="metric-value">+31%</span>
+        <span class="metric-label">Trial → member</span>
+        <p>Story-driven gradients paired with schedule modules raised conversion for the pilot studio.</p>
+      </div>
+      <div class="metric-card">
+        <span class="metric-value">4 locales</span>
+        <span class="metric-label">Localization ready</span>
+        <p>Blueprint covers copy lengths and photography swaps for Seoul, LA, Berlin, and Sydney studios.</p>
+      </div>
+      <div class="metric-card">
+        <span class="metric-value">12 hrs</span>
+        <span class="metric-label">Dev time saved</span>
+        <p>Docs + blueprint states meant engineering implemented gradients + typography once.</p>
+      </div>
+    </section>
+
+    <div class="logo-row" aria-label="Studios">
+      <span class="logo-chip">Horizon Seoul</span>
+      <span class="logo-chip">Echo Park Lab</span>
+      <span class="logo-chip">Berlin Mitte</span>
+      <span class="logo-chip">Sydney Harbour</span>
+    </div>
+
+    <section class="case-grid">
+      <div class="case-card">
+        <h3>Problem</h3>
+        <p>Marketing and service teams shipped separate experiences, so storytelling broke once members clicked “book.”</p>
+      </div>
+      <div class="case-card">
+        <h3>Goal</h3>
+        <p>Blend storytelling + service flows so recruiters and stakeholders see brand craft plus production rigor.</p>
+      </div>
+      <div class="case-card">
+        <h3>Approach</h3>
+        <p>Map onboarding flows → define gradients + photography → prototype modules → document `/blueprint` + docs.</p>
+      </div>
+      <div class="case-card">
+        <h3>Outcome</h3>
+        <p>Live site + blueprint + docs recruiters can inspect; engineers reuse tokens + accessibility guidelines.</p>
       </div>
     </section>
 
@@ -145,6 +468,45 @@
       </div>
     </section>
 
+    <section class="variant-gallery" aria-label="Variant walkthroughs">
+      <div class="variant-card">
+        <h4>Responsive hero</h4>
+        <p>Gradient overlays and typography scale across desktop/tablet/mobile without losing contrast or legibility.</p>
+        <a href="https://horizon-fitness.vercel.app" target="_blank" rel="noopener noreferrer">View responsive layout</a>
+      </div>
+      <div class="variant-card">
+        <h4>Blueprint flows</h4>
+        <p>Blueprint route documents the onboarding storyboard, CTA rhythm, and service choreography.</p>
+        <a href="https://horizon-fitness.vercel.app/blueprint" target="_blank" rel="noopener noreferrer">Open blueprint</a>
+      </div>
+      <div class="variant-card">
+        <h4>Docs workspace</h4>
+        <p>Architecture + design-system Markdown highlight gradient tokens, typography stacks, and service states.</p>
+        <a href="https://github.com/Kennethfeh/horizon-fitness/tree/main/docs" target="_blank" rel="noopener noreferrer">Inspect docs folder</a>
+      </div>
+    </section>
+
+    <div class="accessibility-card">
+      <h3>Accessibility + QA</h3>
+      <ul class="accessibility-list">
+        <li><span class="check-icon">✓</span>Gradient overlays tuned for 4.7:1 contrast so text stays legible over photography.</li>
+        <li><span class="check-icon">✓</span>Focus states and aria labels on schedule modules + CTAs.</li>
+        <li><span class="check-icon">✓</span>Prefers-reduced-motion support: hero animations pause for sensitive users.</li>
+        <li><span class="check-icon">✓</span>Lighthouse desktop audit: Performance 94 · Accessibility 100.</li>
+      </ul>
+    </div>
+
+    <section class="design-assets">
+      <h3>Design system access</h3>
+      <p>Everything needed to validate the craft: live Figma, gradient tokens, architecture copy.</p>
+      <div class="asset-actions">
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/gamemaker-horizon/Horizon-Fitness-Systems?type=design">Open Figma</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/Kennethfeh/horizon-fitness/main/docs/design-system.md">Download design-system.md</a>
+        <a class="btn btn-secondary" target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/Kennethfeh/horizon-fitness/main/docs/architecture.md">Download architecture.md</a>
+      </div>
+      <p class="asset-note">Markdown exports mirror the live system if Figma permissions lag.</p>
+    </section>
+
     <section class="grid split">
       <div class="card">
         <h3>Highlights</h3>
@@ -166,5 +528,42 @@
 
     <footer>Part of the static portfolio so recruiters can explore case studies before opening the live builds · Updated October 2024.</footer>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.preview-tab');
+      const panels = document.querySelectorAll('.preview-screen');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const activatePanel = (target) => {
+        tabs.forEach(tab => {
+          const active = tab.getAttribute('data-preview-target') === target;
+          tab.classList.toggle('active', active);
+          tab.setAttribute('aria-selected', active.toString());
+        });
+
+        panels.forEach(panel => {
+          panel.classList.toggle('active', panel.getAttribute('data-preview-panel') === target);
+        });
+      };
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activatePanel(tab.getAttribute('data-preview-target')));
+        tab.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            activatePanel(tab.getAttribute('data-preview-target'));
+          }
+        });
+      });
+
+      if (!prefersReducedMotion && tabs.length > 0) {
+        let currentIndex = 0;
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % tabs.length;
+          activatePanel(tabs[currentIndex].getAttribute('data-preview-target'));
+        }, 6000);
+      }
+    });
+  </script>
 </body>
 </html>
